@@ -1,0 +1,18 @@
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Estilo para las imágenes */
+  td img {
+    max-width: 70px; /* Ajusta este valor según el tamaño deseado */
+    max-height: 70px; /* Ajusta este valor según el tamaño deseado */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+  }
