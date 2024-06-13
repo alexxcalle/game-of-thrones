@@ -1,22 +1,24 @@
-<table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Last Name</th>
-        <th>FullName</th>
-        <th>Title</th>
-        <th>House</th>
-        <th>Img</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let character of data">
-        <td>{{ character.firstName }}</td>
-        <td>{{ character.lastName }}</td>
-        <td>{{ character.fullName }}</td>
-        <td>{{ character.title }}</td>
-        <td>{{ character.family }}</td>
-        <td><img [src]="character.imageUrl" [alt]="character.fullName"></td>
-      </tr>
-    </tbody>
-  </table>
+<nz-table [nzData]="data" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th nzWidth="100px">Name</th>
+      <th nzWidth="100px">Last Name</th>
+      <th nzWidth="150px">FullName</th>
+      <th nzWidth="100px">Title</th>
+      <th nzWidth="100px">House</th>
+      <th nzWidth="100px">Img</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let character of data">
+      <td>{{ character.firstName }}</td>
+      <td>{{ character.lastName }}</td>
+      <td>{{ character.fullName }}</td>
+      <td>{{ character.title }}</td>
+      <td>{{ character.family }}</td>
+      <td>
+        <img [src]="character.imageUrl" [alt]="character.fullName" style="max-width: 100px;">
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
